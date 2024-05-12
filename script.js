@@ -1,7 +1,7 @@
-import axios from 'axios';
+import Quote from 'inspirational-quotes';
 
-axios.get("https://jsonplaceholder.typicode.com/todos/1")
-  .then((response) => {
-    console.log(response.data, );
-  });
+const quoteText = document.querySelector(".quote");
+const author = document.querySelector(".author");
 
+quoteText.innerText = Quote.getQuote().text;
+author.innerText = Quote.getQuote().author;
